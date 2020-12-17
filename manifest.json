@@ -1,6 +1,6 @@
 {
-    "name": "Navidrome",
-    "id": "navidrome",
+    "name": "Gossa",
+    "id": "gossa",
     "packaging_format": 1,
     "description": {
         "en": "Modern Music Server and Streamer compatible with Subsonic/Airsonic",
@@ -25,8 +25,8 @@
                 "name": "domain",
                 "type": "domain",
                 "ask": {
-                    "en": "Choose a domain name for Navidrome",
-                    "fr": "Choisissez un nom de domaine pour Navidrome"
+                    "en": "Choose a domain name for Gossa",
+                    "fr": "Choisissez un nom de domaine pour Gossa"
                 },
                 "example": "domain.org"
             },
@@ -34,11 +34,11 @@
                 "name": "path",
                 "type": "path",
                 "ask": {
-                    "en": "Choose a path for Navidrome",
-                    "fr": "Choisissez un chemin pour Navidrome"
+                    "en": "Choose a path for Gossa",
+                    "fr": "Choisissez un chemin pour Gossa"
                 },
-                "example": "/navidrome",
-                "default": "/navidrome"
+                "example": "/gossa",
+                "default": "/gossa"
             },
             {
                 "name": "is_public",

@@ -1,21 +1,21 @@
-# Navidrome for YunoHost
+# Gossa for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/navidrome.svg)](https://dash.yunohost.org/appci/app/navidrome) ![](https://ci-apps.yunohost.org/ci/badges/navidrome.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/navidrome.maintain.svg)  
-[![Install Navidrome with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=navidrome)
+[![Integration level](https://dash.yunohost.org/integration/gossa.svg)](https://dash.yunohost.org/appci/app/gossa) ![](https://ci-apps.yunohost.org/ci/badges/gossa.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/gossa.maintain.svg)  
+[![Install Gossa with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=gossa)
 
 *[Lire ce readme en français.](./README_fr.md)*
 
-> *This package allows you to install Navidrome quickly and simply on a YunoHost server.  
+> *This package allows you to install Gossa quickly and simply on a YunoHost server.  
 If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/install) to learn how to install it.*
 
 ## Overview
 Navidrome is an open source web-based music collection server and streamer. It gives you freedom to listen to your music collection from any browser or mobile device.
 
-**Shipped version:** 0.39.0
+**Shipped version:** 0.1.7.1
 
 ## Screenshots
 
-![](https://raw.githubusercontent.com/deluan/navidrome/master/.github/screenshots/ss-desktop-player.png)
+![](https://user-images.githubusercontent.com/760637/71449335-790a4200-274a-11ea-80be-4c536fbad8a1.gif)
 
 ## Demo
 
@@ -53,7 +53,7 @@ You must activate *public site* if you want to connect a client player to Navidr
 ## Links
 
  * Report a bug: https://github.com/YunoHost-Apps/navidrome_ynh/issues
- * App website: https://www.navidrome.org/
+ * App website: https://github.com/pldubouilh/gossa
  * Upstream app repository: https://github.com/deluan/navidrome/
  * YunoHost website: https://yunohost.org/
 

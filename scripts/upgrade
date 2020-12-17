@@ -21,7 +21,6 @@ path_url=$(ynh_app_setting_get --app=$app --key=path)
 is_public=$(ynh_app_setting_get --app=$app --key=is_public)
 final_path=$(ynh_app_setting_get --app=$app --key=final_path)
 port=$(ynh_app_setting_get --app=$app --key=port)
-architecture=$(ynh_detect_arch)
 
 #=================================================
 # CHECK VERSION
@@ -70,7 +69,7 @@ then
 	ynh_secure_remove --file=$final_path
 
 	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir=$final_path --source_id="$architecture"
+	ynh_setup_source --dest_dir=$final_path
 
 	# # Copy the admin saved settings from tmp directory to final config path	
 	# cp -a "$tmpdir/navidrome.toml" "/var/lib/$app/navidrome.toml" 
@@ -107,11 +106,9 @@ ynh_system_user_create --username=$app
 #=================================================
 ynh_script_progression --message="Configuring a systemd service..." --weight=2
 
-config_path="/var/lib/$app"
-
+ynh_replace_string --match_string="__PORT__" --replace_string="$port" --target_file="../conf/systemd.service"
 ynh_replace_string --match_string="__APP__" --replace_string="$app" --target_file="../conf/systemd.service"
 ynh_replace_string --match_string="__FINAL_PATH__" --replace_string="$final_path" --target_file="../conf/systemd.service"
-ynh_replace_string --match_string="__CONFIG_PATH__" --replace_string="$config_path" --target_file="../conf/systemd.service"
 
 # Create a dedicated systemd config
 ynh_add_systemd_config
@@ -125,7 +122,6 @@ ynh_script_progression --message="Securing files and directories..."
 
 # Set permissions on app files
 chown -R $app: $final_path
-chown -R $app: $config_path
 
 #=================================================
 # INTEGRATE SERVICE IN YUNOHOST
